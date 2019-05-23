@@ -88,7 +88,8 @@ echo -e "4. Tools Installer"
 echo -e "-------------------------------------" | lolcat
 echo -e "5. exit..."
 echo -e "-------------------------------------" | lolcat
-echo -e "ROOT@./HappyTools:~#" | lolcat read -e TOD
+echo -e "ROOT@./HappyTools:~#" | lolcat 
+read -e TOD
 case $TOD in
 #Spam SMS
 ("1")
