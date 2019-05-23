@@ -17,9 +17,6 @@ gem install lolcat
 sleep 0.25
 clear
 } 
-# Function Get
-get_sms=$(curl -s http://zlucifer.com/api/sms.php)
-get_call=$(curl -s http://zlucifer.com/api/call.php)
 #colors
 clear
 blue='\e[1;34m'
@@ -77,21 +74,13 @@ echo -e "Thanks My Girl Friends(Assyfamawarni) For Suported" | lolcat
 echo -e "And My MOMS And Father" | lolcat
 echo -e "-------------------------------------" | lolcat
 echo ""
-echo -e " _ _ _     _                      _____                    _           _     " | lolcat
-sleep 0.25
-echo -e "| | | |___| |___ ___ _____ ___   |  |  |___ ___ _ _ _ _   | |_ ___ ___| |___ " | lolcat
-sleep 0.25
-echo -e "| | | | -_| |  _| . |     | -_|  |     | .'| . | | | | |  |  _| . | . | |_ -|" | lolcat
-sleep 0.25
-echo -e "|_____|___|_|___|___|_|_|_|___|  |__|__|__,|  _|_  |_  |  |_| |___|___|_|___|" | lolcat
-sleep 0.25
-echo -e "                                           |_| |___|___|                     " | lolcat
+ 
 sleep 0.25
 echo -e "Selamat Menggunakan Tools Eyaa TOD:V"
 echo -e "-------------------------------------" | lolcat
-echo -e "1. Spam SMS "
+echo -e "1. KALI-Linux "
 echo -e "-------------------------------------" | lolcat
-echo -e "2. spam Telefon"
+echo -e "2. RED_HAWK"
 echo -e "-------------------------------------" | lolcat
 echo -e "3. Cek CCTV"
 echo -e "-------------------------------------" | lolcat
@@ -99,38 +88,46 @@ echo -e "4. Tools Installer"
 echo -e "-------------------------------------" | lolcat
 echo -e "5. exit..."
 echo -e "-------------------------------------" | lolcat
-echo -e "ROOT@>./HappyTools:~#"
-read -e TOD
+echo -e "ROOT@./HappyTools:~#" | lolcat read -e TOD
 case $TOD in
 #Spam SMS
 ("1")
-   echo ""
-   echo -e "$Silahkan Masukan Nomor Target" | lolcat
-   read -p " [root@spamsms:~#>] " target
-   echo ""
-   echo -e "Masukan JUMLAH" | lolcat
-   read -p " [root@spamsms:~#>] " paket 
-   sleep 0.3
-   load
-   clear 
-   echo ""
-   echo -e "$blue Send Message !$nc"
-   echo ""
-   target_do=$get_sms'/sms.php?nomor='$target'&paket='$paket
-   CURL_RESPONSE=`curl -s -o /dev/null -w "%{http_code}" $target_do`
+sleep 0.25
+clear
+apt install wget proot
+sleep 0.25
+clear
+wget https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-arm64-full.tar.xz 
+sleep 0.25
+clear
+proot --link2symlink tar -xf kalifs-arm64-full.tar.xz
+sleep 0.25
+clear
+termuxkali.sh
+sleep 0.25
+clear
+chmod 777 termuxkali.sh 
+sleep 0.25
+clear
+termux-fix-shebang termuxkali.sh
+sleep 0.25
+clear
+./termuxkali.sh
      ;;
 ("2")
-   echo ""
-   echo -e "$Silahkan Masukan Nomor Target" | lolcat
-   read -p " [root@spamcall:~#>] " target
-   echo "" 
-   sleep 0.3
-   load
-   clear 
-   echo ""
-   echo ""
-  cek_target=`curl -s $get_call'/call.php?nomor='$target"&method=grab"`
-  sleep 0.3
+apt-get install php
+sleep 0.25
+clear
+pkg install php
+sleep 0.25
+clear
+git clone https://github.com/Tuhinshubhra/RED_HAWK
+sleep 0.25
+clear
+cd RED_HAWK
+sleep 0.25
+clear
+php rhawk.php
       ;;
 ("3")
  echo ""
@@ -170,5 +167,6 @@ clear
 echo -e "MANUAL EXIT..." | lolcat
 sleep 0.22
 echo -e "SILAHKAN CLOSED TERMUX"
+sleep 0.25
 echo -e "ROOT@EXIT.:~#"
 esac
